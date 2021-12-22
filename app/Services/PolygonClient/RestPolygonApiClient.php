@@ -7,9 +7,11 @@ use PolygonIO\Rest\Rest;
 
 class RestPolygonApiClient implements PolygonClientInterface
 {
-    public function __construct()
+    private string $apiKey;
+
+    public function __construct(string $apiKey)
     {
-        $this->apiKey = 'HsXGDm0Acw5MuVVMGHM6T_cArLqN8Yfo';
+        $this->apiKey = $apiKey;
     }
 
     #[ArrayShape(['open' => "float", 'close' => "float"])]
